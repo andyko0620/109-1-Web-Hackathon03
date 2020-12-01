@@ -82,13 +82,13 @@ function Question() {
           {current_question<=contents.length-1 ?
           <>
           <div id="options">
-              {current_question===4?
+              {current_question===contents.length-1 ?
               <>
               <div className="each-option">
                   <input 
                      type="radio"
                      id={`q${contents[current_question].questionID}_1`}
-                     onChange={choose(5,1)}
+                     //onChange={choose(5,1)}
                      
                   />
                   <span>{contents[current_question].options[0]}</span>
@@ -97,7 +97,7 @@ function Question() {
                   <input 
                      type="radio"
                      id={`q${contents[current_question].questionID}_2`}
-                     onChange={choose(5,2)}
+                    // onChange={choose(5,2)}
                     
                      
                   />
@@ -110,7 +110,7 @@ function Question() {
                   <input 
                      type="radio"
                      id={`q${contents[current_question].questionID}_1`}
-                     onChange={choose(contents[current_question].questionID,1)}
+                    // onChange={choose(contents[current_question].questionID,1)}
                     
                      
                   />
@@ -120,7 +120,7 @@ function Question() {
                   <input 
                      type="radio"
                      id={`q${contents[current_question].questionID}_2`}
-                     onChange={choose(contents[current_question].questionID,2)}
+                    // onChange={choose(contents[current_question].questionID,2)}
                     
                      
                   />
@@ -130,7 +130,7 @@ function Question() {
                   <input 
                      type="radio"
                      id={`q${contents[current_question].questionID}_3`}
-                     onChange={choose(contents[current_question].questionID,3)}
+                    // onChange={choose(contents[current_question].questionID,3)}
                     
                      
                   />
@@ -140,7 +140,7 @@ function Question() {
                   <input 
                      type="radio"
                      id={`q${contents[current_question].questionID}_4`}
-                     onChange={choose(contents[current_question].questionID,4)}
+                    // onChange={choose(contents[current_question].questionID,4)}
                     
                      
                   />
