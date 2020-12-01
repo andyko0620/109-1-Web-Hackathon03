@@ -22,9 +22,9 @@ function Question() {
     // }
   }
 
-  const choose = () => {
+  const choose = (id) => {
     // TODO : update 'ans' for the option you clicked
-    setAns([...ans])
+    setAns([...ans,id])
   }
 
   const getQuestions = () => {
@@ -56,7 +56,7 @@ function Question() {
         <React.Fragment>
           <div id="question-box">
             <div className="question-box-inner">
-            {current_question<contents.length-1 ?
+            {current_question<=contents.length-1 ?
               `Question ${contents[current_question].questionID} of ${contents.length}`
               :`Question ${contents.length} of ${contents.length}`
             }
@@ -78,8 +78,7 @@ function Question() {
               <div className="each-option">
                   <input 
                      type="radio"
-                     id={`q${contents[current_question].questionID}_contents.length`}
-
+                     id={`q${contents[current_question].questionID}_1`}
                     
                      
                   />
@@ -88,7 +87,7 @@ function Question() {
               <div className="each-option">
                   <input 
                      type="radio"
-                     id={`q${contents[current_question].questionID}_contents.length`}
+                     id={`q${contents[current_question].questionID}_2`}
 
                     
                      
@@ -101,7 +100,7 @@ function Question() {
                <div className="each-option">
                   <input 
                      type="radio"
-                     id={`q${contents[current_question].questionID}_contents.length`}
+                     id={`q${contents[current_question].questionID}_1`}
 
                     
                      
@@ -111,8 +110,8 @@ function Question() {
               <div className="each-option">
                   <input 
                      type="radio"
-                     id={`q${contents[current_question].questionID}_contents.length`}
-
+                     id={`q${contents[current_question].questionID}_2`}
+                      
                     
                      
                   />
@@ -121,7 +120,7 @@ function Question() {
               <div className="each-option">
                   <input 
                      type="radio"
-                     id={`q${contents[current_question].questionID}_contents.length`}
+                     id={`q${contents[current_question].questionID}_3`}
 
                     
                      
@@ -131,7 +130,7 @@ function Question() {
               <div className="each-option">
                   <input 
                      type="radio"
-                     id={`q${contents[current_question].questionID}_contents.length`}
+                     id={`q${contents[current_question].questionID}_4`}
 
                     
                      
